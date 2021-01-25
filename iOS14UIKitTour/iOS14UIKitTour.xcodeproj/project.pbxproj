@@ -14,6 +14,8 @@
 		2CE5A0B625BE0F2000883EFB /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5A0B525BE0F2000883EFB /* SplitViewController.swift */; };
 		2CE5A0B925BE0F8700883EFB /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5A0B825BE0F8700883EFB /* Contributor.swift */; };
 		2CE5A0BB25BE0FA700883EFB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5A0BA25BE0FA700883EFB /* Repository.swift */; };
+		600550AF25BE2ADD000D88BD /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600550AE25BE2ADD000D88BD /* ModelController.swift */; };
+		600550B225BE3677000D88BD /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600550B125BE3677000D88BD /* WebAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		2CE5A0B525BE0F2000883EFB /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		2CE5A0B825BE0F8700883EFB /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
 		2CE5A0BA25BE0FA700883EFB /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		600550AE25BE2ADD000D88BD /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		600550B125BE3677000D88BD /* WebAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		2CE5A09E25BE0E2800883EFB /* iOS14UIKitTour */ = {
 			isa = PBXGroup;
 			children = (
+				600550B125BE3677000D88BD /* WebAPI.swift */,
+				600550AD25BE29D9000D88BD /* ModelControllers */,
 				2CE5A0B725BE0F6F00883EFB /* Models */,
 				2CE5A0B325BE0EE300883EFB /* Resources */,
 				2CE5A0B425BE0EF500883EFB /* ViewControllers */,
@@ -92,6 +98,14 @@
 				2CE5A0BA25BE0FA700883EFB /* Repository.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		600550AD25BE29D9000D88BD /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				600550AE25BE2ADD000D88BD /* ModelController.swift */,
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,7 +181,9 @@
 				2CE5A0A025BE0E2800883EFB /* AppDelegate.swift in Sources */,
 				2CE5A0A225BE0E2800883EFB /* SceneDelegate.swift in Sources */,
 				2CE5A0BB25BE0FA700883EFB /* Repository.swift in Sources */,
+				600550AF25BE2ADD000D88BD /* ModelController.swift in Sources */,
 				2CE5A0B625BE0F2000883EFB /* SplitViewController.swift in Sources */,
+				600550B225BE3677000D88BD /* WebAPI.swift in Sources */,
 				2CE5A0B925BE0F8700883EFB /* Contributor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
