@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CBDC9D525BE242800B063F5 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDC9D425BE242800B063F5 /* MockData.swift */; };
 		2CE5A0A025BE0E2800883EFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5A09F25BE0E2800883EFB /* AppDelegate.swift */; };
 		2CE5A0A225BE0E2800883EFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5A0A125BE0E2800883EFB /* SceneDelegate.swift */; };
 		2CE5A0A925BE0E2C00883EFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE5A0A825BE0E2C00883EFB /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CBDC9D425BE242800B063F5 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		2CE5A09C25BE0E2800883EFB /* iOS14UIKitTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS14UIKitTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE5A09F25BE0E2800883EFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CE5A0A125BE0E2800883EFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			children = (
 				2CE5A0B825BE0F8700883EFB /* Contributor.swift */,
 				2CE5A0BA25BE0FA700883EFB /* Repository.swift */,
+				2CBDC9D425BE242800B063F5 /* MockData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CE5A0A025BE0E2800883EFB /* AppDelegate.swift in Sources */,
+				2CBDC9D525BE242800B063F5 /* MockData.swift in Sources */,
 				2CE5A0A225BE0E2800883EFB /* SceneDelegate.swift in Sources */,
 				2CE5A0BB25BE0FA700883EFB /* Repository.swift in Sources */,
 				2CE5A0B625BE0F2000883EFB /* SplitViewController.swift in Sources */,
