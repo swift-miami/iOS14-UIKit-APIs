@@ -7,11 +7,7 @@ import Foundation
 import Combine
 
 class ModelController: ObservableObject {
-    @Published var repositories = [Repository]() {
-        didSet {
-            print("heyyyy")
-        }
-    }
+    @Published var repositories = [Repository]()
     
     var cancellables = Set<AnyCancellable>()
     
@@ -23,8 +19,6 @@ class ModelController: ObservableObject {
         GithubAPI.fetch(.repositories)
             .sink(receiveCompletion: { _ in }) { (repositories: [Repository]) in
                 self.repositories = repositories
-                
-                print("HERE")
             }
             .store(in: &cancellables)
     }
