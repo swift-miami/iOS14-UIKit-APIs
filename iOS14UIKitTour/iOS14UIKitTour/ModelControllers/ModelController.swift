@@ -6,19 +6,26 @@
 import Foundation
 import Combine
 
-class ModelController {
-    @Published var repositories = [Repository]()
+class ModelController: ObservableObject {
+    @Published var repositories = [Repository]() {
+        didSet {
+            print("heyyyy")
+        }
+    }
     
     var cancellables = Set<AnyCancellable>()
     
     init() {
-        
+        fetchRepos()
     }
     
     func fetchRepos() {
-        GithubAPI.fetchRepositories()
-            .sink(receiveCompletion: { _ in }) { value in
-                self.repositories = value
-            }.store(in: &cancellables)
+        GithubAPI.fetch(.repositories)
+            .sink(receiveCompletion: { _ in }) { (repositories: [Repository]) in
+                self.repositories = repositories
+                
+                print("HERE")
+            }
+            .store(in: &cancellables)
     }
 }
