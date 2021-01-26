@@ -1,7 +1,3 @@
-//
-//  WebAPI.swift
-//  iOS14UIKitTour
-//
 
 import Foundation
 import UIKit
@@ -45,7 +41,19 @@ enum GithubAPI {
         .resume()
     }
     
-    // static func fetchRepositories() -> AnyPublisher<[Repository], GithubError> {
-    //     return URLSession.shared.dataTaskPublisher(for: GitHubEndpoint.baseUrl).eraseToAnyPublisher()
-    // }
+    static func fetchRepositories() -> AnyPublisher<[Repository], Error> {
+        URLSession.shared.dataTaskPublisher(for: GitHubEndpoints.repositories)
+            .map(\.data)
+            .decode(type: [Repository].self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
+    }
+    
+    static func fetchContributors(for repository: String) -> AnyPublisher<[Contributor], Error> {
+        let url = URL(string: "https://api.github.com/repos/swift-miami/\(repository)/contributors")!
+        
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .map(\.data)
+            .decode(type: [Contributor].self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
+    }
 }
