@@ -1,7 +1,7 @@
 
 struct Repository: Codable {
     let name: String
-    let user: User
+    let user: Contributor
     let contributorsURL: String
     let updatedDate: String
     

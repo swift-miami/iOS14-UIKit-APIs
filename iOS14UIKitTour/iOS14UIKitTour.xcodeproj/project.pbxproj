@@ -16,7 +16,7 @@
 		2CE5A0BB25BE0FA700883EFB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5A0BA25BE0FA700883EFB /* Repository.swift */; };
 		600550AF25BE2ADD000D88BD /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600550AE25BE2ADD000D88BD /* ModelController.swift */; };
 		600550B225BE3677000D88BD /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600550B125BE3677000D88BD /* GithubAPI.swift */; };
-		600550B825BE71CB000D88BD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600550B725BE71CB000D88BD /* User.swift */; };
+		605C73C225C07EBF00BEFE33 /* GithubEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605C73C125C07EBF00BEFE33 /* GithubEndpoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		2CE5A0BA25BE0FA700883EFB /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		600550AE25BE2ADD000D88BD /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 		600550B125BE3677000D88BD /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
-		600550B725BE71CB000D88BD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		605C73C125C07EBF00BEFE33 /* GithubEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubEndpoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +96,8 @@
 		2CE5A0B725BE0F6F00883EFB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2CE5A0B825BE0F8700883EFB /* Contributor.swift */,
 				2CE5A0BA25BE0FA700883EFB /* Repository.swift */,
-				600550B725BE71CB000D88BD /* User.swift */,
+				2CE5A0B825BE0F8700883EFB /* Contributor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -115,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				600550B125BE3677000D88BD /* GithubAPI.swift */,
+				605C73C125C07EBF00BEFE33 /* GithubEndpoints.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -193,8 +193,8 @@
 				2CE5A0A225BE0E2800883EFB /* SceneDelegate.swift in Sources */,
 				2CE5A0BB25BE0FA700883EFB /* Repository.swift in Sources */,
 				600550AF25BE2ADD000D88BD /* ModelController.swift in Sources */,
-				600550B825BE71CB000D88BD /* User.swift in Sources */,
 				2CE5A0B625BE0F2000883EFB /* SplitViewController.swift in Sources */,
+				605C73C225C07EBF00BEFE33 /* GithubEndpoints.swift in Sources */,
 				600550B225BE3677000D88BD /* GithubAPI.swift in Sources */,
 				2CE5A0B925BE0F8700883EFB /* Contributor.swift in Sources */,
 			);
