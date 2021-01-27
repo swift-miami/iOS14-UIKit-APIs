@@ -6,6 +6,8 @@ final class SplitViewController: UISplitViewController {
 
     // MARK: - Properties
 
+    private var cancellables = Set<AnyCancellable>()
+
     let sideBar: SideBarViewController = {
         let sideBar = SideBarViewController()
         return sideBar
@@ -27,24 +29,25 @@ final class SplitViewController: UISplitViewController {
     @available(*, unavailable) required init?(coder: NSCoder) {
         fatalError("Let's agree to disagree ✌🏻✌🏼✌🏽✌🏾✌🏿")
     }
-  
+
     override func viewDidLoad() {
-      supuer.viewDidLoad()
-    //        GithubAPI.fetch(.repositories)
-    //            .sink(receiveCompletion: { completion in
-    //                print(completion)
-    //            }, receiveValue: { (repositories: [Repository]) in
-    //
-    //
-    //            }).store(in: &cancellables)
-        
-    //        GithubAPI.fetch(.contributors("backtobasicsuikit"))
-    //            .sink(receiveCompletion: { completion in
-    //                print(completion)
-    //            }, receiveValue: { (contributors: [Contributor]) in
-    //                print(contributors)
-    //
-    //            }).store(in: &cancellables)
+        super.viewDidLoad()
+
+        GithubAPI.fetch(.repositories)
+            .sink(receiveCompletion: { completion in
+                print(completion)
+            }, receiveValue: { (repositories: [Repository]) in
+                print(repositories)
+                
+            }).store(in: &cancellables)
+
+        GithubAPI.fetch(.contributors("backtobasicsuikit"))
+            .sink(receiveCompletion: { completion in
+                print(completion)
+            }, receiveValue: { (contributors: [Contributor]) in
+                print(contributors)
+
+            }).store(in: &cancellables)
     }
 
 
