@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C678D6125BFC8D800ECA971 /* UICollectionViewCompositionalLayout+LayoutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C678D6025BFC8D800ECA971 /* UICollectionViewCompositionalLayout+LayoutBuilder.swift */; };
+		2C678D6425BFC8E500ECA971 /* UIAction+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C678D6325BFC8E500ECA971 /* UIAction+Additions.swift */; };
+		2C678D6725BFC8EF00ECA971 /* UIContextualAction+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C678D6625BFC8EF00ECA971 /* UIContextualAction+Additions.swift */; };
+		2C678D6A25BFCDA700ECA971 /* MenuAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C678D6925BFCDA700ECA971 /* MenuAction.swift */; };
+		2C678D6D25BFCDF700ECA971 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C678D6C25BFCDF700ECA971 /* Utils.swift */; };
+		2C678D7025BFCF8400ECA971 /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C678D6F25BFCF8400ECA971 /* SideBarViewController.swift */; };
+		2C678D7325BFCFE500ECA971 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C678D7225BFCFE500ECA971 /* DetailViewController.swift */; };
+		2C678D7625BFD90500ECA971 /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C678D7525BFD90500ECA971 /* System.swift */; };
 		2CBDC9D525BE242800B063F5 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDC9D425BE242800B063F5 /* MockData.swift */; };
 		2CE5A0A025BE0E2800883EFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5A09F25BE0E2800883EFB /* AppDelegate.swift */; };
 		2CE5A0A225BE0E2800883EFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5A0A125BE0E2800883EFB /* SceneDelegate.swift */; };
@@ -18,6 +26,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C678D6025BFC8D800ECA971 /* UICollectionViewCompositionalLayout+LayoutBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCompositionalLayout+LayoutBuilder.swift"; sourceTree = "<group>"; };
+		2C678D6325BFC8E500ECA971 /* UIAction+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAction+Additions.swift"; sourceTree = "<group>"; };
+		2C678D6625BFC8EF00ECA971 /* UIContextualAction+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIContextualAction+Additions.swift"; sourceTree = "<group>"; };
+		2C678D6925BFCDA700ECA971 /* MenuAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAction.swift; sourceTree = "<group>"; };
+		2C678D6C25BFCDF700ECA971 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		2C678D6F25BFCF8400ECA971 /* SideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
+		2C678D7225BFCFE500ECA971 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2C678D7525BFD90500ECA971 /* System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
 		2CBDC9D425BE242800B063F5 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		2CE5A09C25BE0E2800883EFB /* iOS14UIKitTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS14UIKitTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE5A09F25BE0E2800883EFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +57,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C678D5F25BFC8A500ECA971 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2C678D6325BFC8E500ECA971 /* UIAction+Additions.swift */,
+				2C678D6025BFC8D800ECA971 /* UICollectionViewCompositionalLayout+LayoutBuilder.swift */,
+				2C678D6625BFC8EF00ECA971 /* UIContextualAction+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2CE5A09325BE0E2800883EFB = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +86,7 @@
 		2CE5A09E25BE0E2800883EFB /* iOS14UIKitTour */ = {
 			isa = PBXGroup;
 			children = (
+				2C678D5F25BFC8A500ECA971 /* Extensions */,
 				2CE5A0B725BE0F6F00883EFB /* Models */,
 				2CE5A0B325BE0EE300883EFB /* Resources */,
 				2CE5A0B425BE0EF500883EFB /* ViewControllers */,
@@ -75,6 +102,7 @@
 				2CE5A0A825BE0E2C00883EFB /* Assets.xcassets */,
 				2CE5A0AD25BE0E2C00883EFB /* Info.plist */,
 				2CE5A0AA25BE0E2C00883EFB /* LaunchScreen.storyboard */,
+				2C678D6C25BFCDF700ECA971 /* Utils.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -82,6 +110,8 @@
 		2CE5A0B425BE0EF500883EFB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2C678D7225BFCFE500ECA971 /* DetailViewController.swift */,
+				2C678D6F25BFCF8400ECA971 /* SideBarViewController.swift */,
 				2CE5A0B525BE0F2000883EFB /* SplitViewController.swift */,
 			);
 			path = ViewControllers;
@@ -91,8 +121,10 @@
 			isa = PBXGroup;
 			children = (
 				2CE5A0B825BE0F8700883EFB /* Contributor.swift */,
+				2C678D6925BFCDA700ECA971 /* MenuAction.swift */,
 				2CE5A0BA25BE0FA700883EFB /* Repository.swift */,
 				2CBDC9D425BE242800B063F5 /* MockData.swift */,
+				2C678D7525BFD90500ECA971 /* System.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,7 +156,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = ivancr;
 				TargetAttributes = {
 					2CE5A09B25BE0E2800883EFB = {
@@ -172,7 +204,15 @@
 				2CE5A0A225BE0E2800883EFB /* SceneDelegate.swift in Sources */,
 				2CE5A0BB25BE0FA700883EFB /* Repository.swift in Sources */,
 				2CE5A0B625BE0F2000883EFB /* SplitViewController.swift in Sources */,
+				2C678D6D25BFCDF700ECA971 /* Utils.swift in Sources */,
+				2C678D6725BFC8EF00ECA971 /* UIContextualAction+Additions.swift in Sources */,
+				2C678D6A25BFCDA700ECA971 /* MenuAction.swift in Sources */,
+				2C678D7025BFCF8400ECA971 /* SideBarViewController.swift in Sources */,
+				2C678D6125BFC8D800ECA971 /* UICollectionViewCompositionalLayout+LayoutBuilder.swift in Sources */,
+				2C678D7625BFD90500ECA971 /* System.swift in Sources */,
+				2C678D7325BFCFE500ECA971 /* DetailViewController.swift in Sources */,
 				2CE5A0B925BE0F8700883EFB /* Contributor.swift in Sources */,
+				2C678D6425BFC8E500ECA971 /* UIAction+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +256,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -276,6 +317,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
