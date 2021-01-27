@@ -17,8 +17,8 @@ class ModelController: ObservableObject {
     
     func fetchRepos() {
         GithubAPI.fetch(.repositories)
-            .sink(receiveCompletion: { _ in }) { (repositories: [Repository]) in
-                self.repositories = repositories
+            .sink(receiveCompletion: { _ in }) { [weak self] (repositories: [Repository]) in
+                self?.repositories = repositories
             }
             .store(in: &cancellables)
     }
