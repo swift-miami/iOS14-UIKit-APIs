@@ -23,6 +23,9 @@
 		2CE5A0B625BE0F2000883EFB /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5A0B525BE0F2000883EFB /* SplitViewController.swift */; };
 		2CE5A0B925BE0F8700883EFB /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5A0B825BE0F8700883EFB /* Contributor.swift */; };
 		2CE5A0BB25BE0FA700883EFB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5A0BA25BE0FA700883EFB /* Repository.swift */; };
+		600550AF25BE2ADD000D88BD /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600550AE25BE2ADD000D88BD /* ModelController.swift */; };
+		600550B225BE3677000D88BD /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600550B125BE3677000D88BD /* GithubAPI.swift */; };
+		605C73C225C07EBF00BEFE33 /* GithubEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605C73C125C07EBF00BEFE33 /* GithubEndpoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		2CE5A0B525BE0F2000883EFB /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		2CE5A0B825BE0F8700883EFB /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
 		2CE5A0BA25BE0FA700883EFB /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		600550AE25BE2ADD000D88BD /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		600550B125BE3677000D88BD /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		605C73C125C07EBF00BEFE33 /* GithubEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubEndpoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,8 @@
 		2CE5A09E25BE0E2800883EFB /* iOS14UIKitTour */ = {
 			isa = PBXGroup;
 			children = (
+				600550BB25BE728F000D88BD /* API */,
+				600550AD25BE29D9000D88BD /* ModelControllers */,
 				2C678D5F25BFC8A500ECA971 /* Extensions */,
 				2CE5A0B725BE0F6F00883EFB /* Models */,
 				2CE5A0B325BE0EE300883EFB /* Resources */,
@@ -120,6 +128,7 @@
 		2CE5A0B725BE0F6F00883EFB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2CE5A0BA25BE0FA700883EFB /* Repository.swift */,
 				2CE5A0B825BE0F8700883EFB /* Contributor.swift */,
 				2C678D6925BFCDA700ECA971 /* MenuAction.swift */,
 				2CE5A0BA25BE0FA700883EFB /* Repository.swift */,
@@ -127,6 +136,23 @@
 				2C678D7525BFD90500ECA971 /* System.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		600550AD25BE29D9000D88BD /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				600550AE25BE2ADD000D88BD /* ModelController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		600550BB25BE728F000D88BD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				600550B125BE3677000D88BD /* GithubAPI.swift */,
+				605C73C125C07EBF00BEFE33 /* GithubEndpoints.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +229,10 @@
 				2CBDC9D525BE242800B063F5 /* MockData.swift in Sources */,
 				2CE5A0A225BE0E2800883EFB /* SceneDelegate.swift in Sources */,
 				2CE5A0BB25BE0FA700883EFB /* Repository.swift in Sources */,
+				600550AF25BE2ADD000D88BD /* ModelController.swift in Sources */,
 				2CE5A0B625BE0F2000883EFB /* SplitViewController.swift in Sources */,
+				605C73C225C07EBF00BEFE33 /* GithubEndpoints.swift in Sources */,
+				600550B225BE3677000D88BD /* GithubAPI.swift in Sources */,
 				2C678D6D25BFCDF700ECA971 /* Utils.swift in Sources */,
 				2C678D6725BFC8EF00ECA971 /* UIContextualAction+Additions.swift in Sources */,
 				2C678D6A25BFCDA700ECA971 /* MenuAction.swift in Sources */,
@@ -211,7 +240,8 @@
 				2C678D6125BFC8D800ECA971 /* UICollectionViewCompositionalLayout+LayoutBuilder.swift in Sources */,
 				2C678D7625BFD90500ECA971 /* System.swift in Sources */,
 				2C678D7325BFCFE500ECA971 /* DetailViewController.swift in Sources */,
-				2CE5A0B925BE0F8700883EFB /* Contributor.swift in Sources */,
+				2CE5A0B925BE0F8700883EFB /* 
+        .swift in Sources */,
 				2C678D6425BFC8E500ECA971 /* UIAction+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
