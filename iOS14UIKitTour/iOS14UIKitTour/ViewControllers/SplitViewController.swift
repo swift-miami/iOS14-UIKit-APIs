@@ -1,9 +1,12 @@
 
 import UIKit
+import Combine
 
 final class SplitViewController: UISplitViewController {
 
     // MARK: - Properties
+
+    private var cancellables = Set<AnyCancellable>()
 
     let sideBar: SideBarViewController = {
         let sideBar = SideBarViewController()
@@ -26,6 +29,25 @@ final class SplitViewController: UISplitViewController {
     @available(*, unavailable) required init?(coder: NSCoder) {
         fatalError("Let's agree to disagree ✌🏻✌🏼✌🏽✌🏾✌🏿")
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        GithubAPI.fetch(.repositories)
+            .sink(receiveCompletion: { completion in
+            }, receiveValue: { [weak self] (_: [Repository]) in
+               
+                
+            }).store(in: &cancellables)
+
+        GithubAPI.fetch(.contributors("backtobasicsuikit"))
+            .sink(receiveCompletion: { _ in
+               
+            }, receiveValue: { [weak self] (_: [Contributor]) in
+
+            }).store(in: &cancellables)
+    }
+
 
     // MARK: - Helpers
 
