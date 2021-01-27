@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let windowScene = scene as? UIWindowScene else { return }
 
-        let splitVC = SplitViewController()
+        let splitVC = SplitViewController(style: .doubleColumn)
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = splitVC
         self.window = window
