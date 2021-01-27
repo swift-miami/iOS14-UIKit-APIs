@@ -15,10 +15,7 @@ enum GitHubEndpoints {
         case .repositories:
             return URL(string: "https://api.github.com/orgs/swift-miami/repos")!
         case .contributors(let repository):
-           
-            let ur = URL(string: "https://api.github.com/repos/swift-miami/\(repository)/contributors")!
-            print(ur)
-            return ur
+            return URL(string: "https://api.github.com/repos/swift-miami/\(repository)/contributors")!
         }
     }
 }

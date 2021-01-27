@@ -23,16 +23,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.rootViewController = splitVC
         self.window = window
         window.makeKeyAndVisible()
-        
-        
-//        let layout = UICollectionViewFlowLayout()
-//        let mainVC = SplitViewController(collectionViewLayout: layout)
-//        let navController = UINavigationController(rootViewController: mainVC)
-//        navController.navigationBar.prefersLargeTitles = true
-//
-//        let window = UIWindow(windowScene: windowScene)
-//        window.rootViewController = navController
-//        self.window = window
-//        window.makeKeyAndVisible()
     }
 }

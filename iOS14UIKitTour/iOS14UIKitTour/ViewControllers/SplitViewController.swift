@@ -35,17 +35,15 @@ final class SplitViewController: UISplitViewController {
 
         GithubAPI.fetch(.repositories)
             .sink(receiveCompletion: { completion in
-                print(completion)
-            }, receiveValue: { (repositories: [Repository]) in
-                print(repositories)
+            }, receiveValue: { [weak self] (_: [Repository]) in
+               
                 
             }).store(in: &cancellables)
 
         GithubAPI.fetch(.contributors("backtobasicsuikit"))
-            .sink(receiveCompletion: { completion in
-                print(completion)
-            }, receiveValue: { (contributors: [Contributor]) in
-                print(contributors)
+            .sink(receiveCompletion: { _ in
+               
+            }, receiveValue: { [weak self] (_: [Contributor]) in
 
             }).store(in: &cancellables)
     }
