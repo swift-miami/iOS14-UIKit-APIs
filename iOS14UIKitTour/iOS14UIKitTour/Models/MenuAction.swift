@@ -90,3 +90,13 @@ extension UISwipeActionsConfiguration {
         return config
     }
 }
+
+extension UIMenu {
+    static func demo() -> UIMenu {
+        let delete = UIAction(action: .delete, handler: { })
+        let duplicate = UIAction(action: .duplicate, handler: { })
+        let share = UIAction(action: .share, handler: { })
+
+        return UIMenu(actions: [delete, duplicate, share])
+    }
+}

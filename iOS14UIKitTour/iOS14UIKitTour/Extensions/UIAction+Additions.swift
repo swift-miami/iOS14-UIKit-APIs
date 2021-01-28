@@ -1,9 +1,9 @@
 
 import UIKit
 
-extension UIAction {
+// MARK: - UIAction
 
-    // MARK: - Inits
+extension UIAction {
 
     /// Convenience init to build a UIAction from a `MenuAction`
     /// to be used in a `UIContextMenuConfiguration`.
@@ -20,8 +20,15 @@ extension UIAction {
             self.attributes = attribute
         }
     }
+}
 
-    // MARK: - Menu Builders
+// MARK: - UIMenu
+
+extension UIMenu {
+
+    convenience init(actions: [UIAction]) {
+        self.init(title: "", children: actions)
+    }
 }
 
 // MARK: - UIContextMenuConfiguration
