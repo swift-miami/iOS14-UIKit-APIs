@@ -55,14 +55,26 @@ final class SideBarViewController: UIViewController {
     }()
 
     private lazy var diffableDataSource: DiffableDataSource = {
-        let diffableDataSource = DiffableDataSource(collectionView: collectionView) {
-            [weak self] collectionView, indexPath, item -> UICollectionViewCell? in
 
-            return self?.cellBuilder(collectionView: collectionView,
-                                     indexPath: indexPath,
-                                     item: item)
+        /// If you don't build the registration outside of the `cellProvider` closure nothing will be re-used.
+        let registration = UICollectionView.CellRegistration<UICollectionViewListCell, Item> { cell, indePath, item in
+            var content = cell.defaultContentConfiguration()
+            content.text = item.name
+            content.secondaryText = item.description
+            content.secondaryTextProperties.color = .secondaryLabel
+            content.secondaryTextProperties.numberOfLines = 0
+            cell.contentConfiguration = content
+            cell.accessories = [.outlineDisclosure()]
         }
 
+        let diffableDataSource = DiffableDataSource(collectionView: collectionView) {
+            collectionView, indexPath, item -> UICollectionViewCell? in
+
+            return collectionView
+                .dequeueConfiguredReusableCell(using: registration,
+                                               for: indexPath,
+                                               item: item)
+        }
         return diffableDataSource
     }()
 
@@ -93,27 +105,6 @@ final class SideBarViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
 
         navigationItem.rightBarButtonItem = barButton
-    }
-
-    private func cellBuilder(collectionView: UICollectionView,
-                             indexPath: IndexPath,
-                             item: Item) -> UICollectionViewCell {
-
-
-        let registation = UICollectionView.CellRegistration<UICollectionViewListCell, Item> { cell, indexPath, item in
-            var content = cell.defaultContentConfiguration()
-            content.text = item.name
-            content.secondaryText = item.description
-            content.secondaryTextProperties.color = .secondaryLabel
-            content.secondaryTextProperties.numberOfLines = 1
-            cell.contentConfiguration = content
-            cell.accessories = [.outlineDisclosure()]
-        }
-
-        return collectionView
-            .dequeueConfiguredReusableCell(using: registation,
-                                           for: indexPath,
-                                           item: item)
     }
 
     private func showAlert() {

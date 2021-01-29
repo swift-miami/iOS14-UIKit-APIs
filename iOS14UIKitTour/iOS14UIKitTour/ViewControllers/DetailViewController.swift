@@ -31,12 +31,19 @@ final class DetailViewController: UIViewController {
     }()
 
     private lazy var diffableDataSource: DiffableDataSource = {
-        let diffableDataSource = DiffableDataSource(collectionView: collectionView) {
-            [weak self] collectionView, indexPath, item -> UICollectionViewCell? in
 
-            return self?.cellBuilder(collectionView: collectionView,
-                               indexPath: indexPath,
-                               item: item)
+        /// If you don't build the registration outside of the `cellProvider` closure nothing will be re-used.
+        let registation = ContributorCardCell.Registration { cell, indexPath, item in
+            cell.configure(with: item)
+        }
+
+        let diffableDataSource = DiffableDataSource(collectionView: collectionView) {
+            collectionView, indexPath, item -> UICollectionViewCell? in
+
+            return collectionView
+                .dequeueConfiguredReusableCell(using: registation,
+                                               for: indexPath,
+                                               item: item)
         }
 
         return diffableDataSource
@@ -62,20 +69,6 @@ final class DetailViewController: UIViewController {
             collectionView.topAnchor.constraint(equalTo: view.topAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
-    }
-
-    private func cellBuilder(collectionView: UICollectionView,
-                     indexPath: IndexPath,
-                     item: Contributor) -> UICollectionViewCell {
-
-        let registation = ContributorCardCell.Registration { cell, indexPath, item in
-            cell.configure(with: item)
-        }
-
-        return collectionView
-            .dequeueConfiguredReusableCell(using: registation,
-                                           for: indexPath,
-                                           item: item)
     }
 
     private func setupNavBar() {
